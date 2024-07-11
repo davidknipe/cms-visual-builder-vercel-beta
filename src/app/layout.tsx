@@ -26,8 +26,8 @@ type RootLayoutProps = Readonly<PropsWithChildren<{}>>
 
 export default function RootLayout({ children }: RootLayoutProps) {
     return <html lang="en">
-        <ThemeProvider value={{ theme: "system" }}>
                 <Script src="https://cdn.optimizely.com/js/29815861190.js" />
+                <ThemeProvider value={{ theme: "system" }}>
                 <Body className={`${figtree.className} bg-ghost-white text-vulcan dark:bg-vulcan dark:text-ghost-white`}>
                 <div className="flex min-h-screen flex-col justify-between">
                     <MoseyBankHeader />
