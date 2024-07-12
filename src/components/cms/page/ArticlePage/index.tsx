@@ -19,14 +19,13 @@ export const ArticlePagePage : CmsComponent<ArticlePageDataFragment> = async ({ 
         `${ data.articleAuthors?.slice(0,-1).join(', ') } ${ andLabel } ${ data.articleAuthors?.slice(-1)[0] }` : 
         (data.articleAuthors?.join(', ') ?? '')
     const articleDate : string | undefined = data.metadata?.published ?? undefined
+    const imageUrl : string = data.articleHeroImageUrl as string
 
     // <pre className="w-full overflow-x-hidden font-mono text-sm">{ JSON.stringify(data, undefined, 4) }</pre>
 
     return <div className="type:article-page relative">
         <div className="article-image aspect-[5/2] md:aspect-[5/1] relative w-full lg:aspect-[3/1] lg:z-[-10] lg:shadow-xl">
-            {/* <CmsImage src={ data.articleHeroImage } alt="hero-image" aria-hidden priority fill className="object-cover" /> */}
-            {/* <ArticleImage url={ data.articleHeroImageUrl } src={ data.articleHeroImage } alt="hero-image" aria-hidden priority fill className="object-cover" /> */}
-            <ArticleImage sourcedata={ data.articleHeroImageUrl } src={ data.articleHeroImage } alt="hero-image" aria-hidden priority fill className="object-cover" />
+            <ArticleImage sourcedata={ imageUrl } src={ data.articleHeroImage } alt="hero-image" aria-hidden priority fill className="object-cover" />
         </div>
         <div className="outer-padding">
             <div className="mx-auto container z-[50] mt-8 lg:-mt-[128px] xl:-mt-[256px] mb-8">
