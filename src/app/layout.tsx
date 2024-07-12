@@ -1,6 +1,7 @@
 import { type PropsWithChildren } from "react"
 import type { Metadata } from "next"
 import Script from "next/script"
+import Head from "next/head"
 
 // Components
 import { MoseyBankHeader } from '@/components/header'
@@ -25,8 +26,12 @@ export const metadata: Metadata = {
 type RootLayoutProps = Readonly<PropsWithChildren<{}>>
 
 export default function RootLayout({ children }: RootLayoutProps) {
+
     return <html lang="en">
-            <Script src="https://cdn.optimizely.com/js/29815861190.js" />
+            <Head>
+                <Script src="https://cdn.optimizely.com/js/29815861190.js" />
+                {/* <Script id="opti-script">{`console.log('Hello world!');`}</Script> */}
+            </Head>
             <ThemeProvider value={{ theme: "system" }}>
             <Body className={`${figtree.className} bg-ghost-white text-vulcan dark:bg-vulcan dark:text-ghost-white`}>
                 <div className="flex min-h-screen flex-col justify-between">
