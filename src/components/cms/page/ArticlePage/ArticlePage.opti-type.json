@@ -92,6 +92,17 @@
       "group": "Information",
       "sortOrder": 40,
       "editorSettings": {}
+    },
+    "articleHeroImageUrl": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "HeroImageUrl",
+      "description": "",
+      "localized": true,
+      "required": true,
+      "group": "Information",
+      "sortOrder": 20,
+      "editorSettings": {}
     }
   }
 }

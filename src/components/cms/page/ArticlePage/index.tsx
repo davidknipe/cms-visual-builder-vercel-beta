@@ -6,6 +6,7 @@ import { getLabel } from "@/labels"
 import { RichText } from "@remkoj/optimizely-cms-react/components"
 import { CmsImage } from '@/components/shared/cms_image'
 import { DateDisplay } from "@/components/shared/date"
+import { ArticleImage } from "./ArticleImage"
 
 export const ArticlePagePage : CmsComponent<ArticlePageDataFragment> = async ({ data, contentLink }) => 
 {
@@ -19,12 +20,13 @@ export const ArticlePagePage : CmsComponent<ArticlePageDataFragment> = async ({ 
         (data.articleAuthors?.join(', ') ?? '')
     const articleDate : string | undefined = data.metadata?.published ?? undefined
 
-
     // <pre className="w-full overflow-x-hidden font-mono text-sm">{ JSON.stringify(data, undefined, 4) }</pre>
 
     return <div className="type:article-page relative">
         <div className="article-image aspect-[5/2] md:aspect-[5/1] relative w-full lg:aspect-[3/1] lg:z-[-10] lg:shadow-xl">
-            <CmsImage src={ data.articleHeroImage } alt="hero-image" aria-hidden priority fill className="object-cover" />
+            {/* <CmsImage src={ data.articleHeroImage } alt="hero-image" aria-hidden priority fill className="object-cover" /> */}
+            {/* <ArticleImage url={ data.articleHeroImageUrl } src={ data.articleHeroImage } alt="hero-image" aria-hidden priority fill className="object-cover" /> */}
+            <ArticleImage sourcedata={ data.articleHeroImageUrl } src={ data.articleHeroImage } alt="hero-image" aria-hidden priority fill className="object-cover" />
         </div>
         <div className="outer-padding">
             <div className="mx-auto container z-[50] mt-8 lg:-mt-[128px] xl:-mt-[256px] mb-8">

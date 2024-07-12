@@ -16,6 +16,27 @@ const nextConfig = {
     },
 };
 
+nextConfig.images.remotePatterns.push({
+  protocol: 'https',
+  hostname: 'images.cmp.optimizely.com'
+})
+
+nextConfig.images.remotePatterns.push({
+  protocol: 'https',
+  hostname: 'images2.cmp.optimizely.com'
+})
+
+nextConfig.images.remotePatterns.push({
+  protocol: 'https',
+  hostname: 'images3.cmp.optimizely.com'
+})
+
+nextConfig.images.remotePatterns.push({
+  protocol: 'https',
+  hostname: 'images4.cmp.optimizely.com'
+})
+
+
 /**
 console.log(' 🚀 Site configuration')
 nextConfig.images.remotePatterns.forEach(pattern => {
