@@ -4,13 +4,13 @@ import { type ComponentProps, type FunctionComponent } from 'react'
 import { type LinkDataFragment, type ReferenceDataFragment } from '@/gql/graphql'
 
 type ArticleImageImageProps = Readonly<{
-    sourcedata?: string | undefined,
+    sourceUrl?: string | undefined,
     src?: LinkDataFragment | ReferenceDataFragment | null,
     fallbackSrc?: string,
     className?: string,
 } & Omit<ComponentProps<typeof Image>, 'src'>>
 
-export const ArticleImage : FunctionComponent<ArticleImageImageProps> = ({ sourcedata, src, fallbackSrc, alt, ...props }) => {
+export const ArticleImage : FunctionComponent<ArticleImageImageProps> = ({ sourceUrl, src, fallbackSrc, alt, ...props }) => {
 
     // console.log("==============================================================================================================")
     // console.log("sourcedata")
@@ -22,11 +22,11 @@ export const ArticleImage : FunctionComponent<ArticleImageImageProps> = ({ sourc
     // console.log(src)
     // console.log("==============================================================================================================")
 
-    if (sourcedata != undefined)
+    if (sourceUrl != undefined)
     {
         //return <Image src="{ url }" alt="Picture of the author" />
         //return <img src="{ urlLink }" aria-hidden priority fill className="object-cover" style={{position : 'absolute', height : '100%', width : '100%', left : 0, top : 0, right : 0, bottom : 0, color : 'transparent'}} />
-        return <Image src={ sourcedata } alt={ alt } {...props} />
+        return <Image src={ sourceUrl } alt={ alt } {...props} />
     }
     else
     {

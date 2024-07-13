@@ -25,7 +25,7 @@ export const ArticlePagePage : CmsComponent<ArticlePageDataFragment> = async ({ 
 
     return <div className="type:article-page relative">
         <div className="article-image aspect-[5/2] md:aspect-[5/1] relative w-full lg:aspect-[3/1] lg:z-[-10] lg:shadow-xl">
-            <ArticleImage sourcedata={ imageUrl } src={ data.articleHeroImage } alt="hero-image" aria-hidden priority fill className="object-cover" />
+            <ArticleImage sourceUrl={ imageUrl } src={ data.articleHeroImage } alt="hero-image" aria-hidden priority fill className="object-cover" />
         </div>
         <div className="outer-padding">
             <div className="mx-auto container z-[50] mt-8 lg:-mt-[128px] xl:-mt-[256px] mb-8">
