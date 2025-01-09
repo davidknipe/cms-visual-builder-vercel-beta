@@ -6,9 +6,6 @@ import DefaultGridComponent from './grid/default-grid'
 import CardRow from './row/card-row'
 import DefaultRow from './row/default-row'
 import CarouselRow from './row/carousel-row'
-import { prefixDictionaryEntries } from "@/components/utils"
-
-prefixDictionaryEntries(elements, "Element")
 
 export const ComponentModuleList : ComponentTypeDictionary = [
     ...elements,

@@ -7,7 +7,6 @@ import pageComponents from "./page";
 import nodeComponents from "./styles"
 
 prefixDictionaryEntries(componentComponents, 'Component');
-prefixDictionaryEntries(elementComponents, 'Element');
 prefixDictionaryEntries(elementComponents, 'Component'); // Elements are a subtype of Component
 prefixDictionaryEntries(experienceComponents, 'Experience');
 prefixDictionaryEntries(experienceComponents, 'Page'); // Experiences are a subtype of Page
