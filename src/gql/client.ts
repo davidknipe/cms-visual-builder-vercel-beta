@@ -263,6 +263,7 @@ export const ArticlePageDataFragmentDoc = gql`
   articleBody {
     json
   }
+  articleHeroImageUrl
 }
     `;
 export const MenuContentFragmentDoc = gql`

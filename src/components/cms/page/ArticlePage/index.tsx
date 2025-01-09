@@ -3,7 +3,7 @@ import { ArticlePageDataFragmentDoc, type ArticlePageDataFragment } from "@/gql/
 import { getSdk } from '@/sdk'
 import { CmsEditable, getServerContext } from "@remkoj/optimizely-cms-react/rsc"
 import { getLabel } from "@/labels"
-import { RichText } from "@remkoj/optimizely-cms-react/components"
+import { RichText } from "@remkoj/optimizely-cms-react/rsc"
 import { CmsImage } from '@/components/shared/cms_image'
 import { DateDisplay } from "@/components/shared/date"
 import { ArticleImage } from "./ArticleImage"
