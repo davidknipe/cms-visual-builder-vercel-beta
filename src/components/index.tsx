@@ -10,6 +10,7 @@ import { getFactory, RichTextComponentDictionary } from '@remkoj/optimizely-cms-
 import { prefixDictionaryEntries } from "@/components/utils"
 import cmsComponents from './cms'
 import components from './component'
+import NodeComponent from './node'
 
 export const getComponentFactory = cache(() => {
     const factory = getFactory()
@@ -19,6 +20,7 @@ export const getComponentFactory = cache(() => {
     factory.registerAll(cmsComponents)
     factory.registerAll(components)
     factory.registerAll(RichTextComponentDictionary)
+    factory.register('Node', NodeComponent)
 
     /*console.log("Factory contents")
     factory.extract().forEach(x => {
