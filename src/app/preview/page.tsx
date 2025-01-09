@@ -4,7 +4,6 @@ import { getAuthorizedServerClient } from '@remkoj/optimizely-cms-nextjs'
 import { getContentById } from '@/gql/functions'
 
 const EditPage = OnPageEdit.createEditPageComponent(createFactory(), {
-    //@ts-expect-error
     loader: getContentById,
     clientFactory: (token?: string) => {
         const client = getAuthorizedServerClient(token)
